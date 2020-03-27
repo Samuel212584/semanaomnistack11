@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import './global.css'
+import Routes from './routes'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello OmniStack
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Routes />
+  );
+}
+
+export default App;
+
+  /** Funcionamento com a page header.js 
+
+import React, { useState } from 'react';
+import Header from './Header'
+function App() {
+  const [count, setCount] = useState(0);
+  // Retorna um Array = [valor, FunçaoDeAtualização]
+
+
+  function increment() {
+    setCount(count + 1);
+  }
+
+  return (
+    <div>
+      <Header>Contador: {count}</Header>
+      <button onClick={increment}>Incrementar</button>
     </div>
   );
 }
 
 export default App;
+*/
